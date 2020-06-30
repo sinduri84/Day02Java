@@ -24,13 +24,13 @@ public class DayTwoClass {
     static void averageOfNumbers() {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter first number: ");
-        int firstNumber = input.nextInt();
+        double firstNumber = input.nextDouble();
         System.out.print("Enter second number: ");
-        int secondNumber = input.nextInt();
+        double secondNumber = input.nextDouble();
         System.out.print("Enter third number: ");
-        int thirdNumber = input.nextInt();
-        int sum = firstNumber + secondNumber + thirdNumber;
-        double average = (double) sum/3;
+        double thirdNumber = input.nextDouble();
+        double sum = firstNumber + secondNumber + thirdNumber;
+        double average = sum/3;
         System.out.printf("The average value is %.2f %n", average);
 
     }
@@ -64,11 +64,10 @@ public class DayTwoClass {
         String aSentence = "Java is great!";
 
         Scanner inputIndex = new Scanner(System.in);
+        System.out.print("Input index: ");
+        int n = inputIndex.nextInt();
 
-//        System.out.print("Input index: ");
-//        int n = inputIndex.nextInt();
-//
-//        System.out.println("The character at position " + n + " is " + aSentence.charAt(n) + ".");
+        System.out.println("The character at position " + n + " is " + aSentence.charAt(n) + ".");
 
         //A2
         System.out.println("");
