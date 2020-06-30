@@ -1,20 +1,24 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class DayTwoClass {
 
-    static void fToC(int fahrenheit) {
-        int celsius = (int) Math.round((fahrenheit - 32) * 0.5556);
-        System.out.println(fahrenheit + "\u00B0F is " + celsius + "\u00B0C");
+    static void fToC(double fahrenheit) {
+        double celsius = (fahrenheit - 32) * 0.5556;
+        DecimalFormat df = new DecimalFormat("###.##");
+        System.out.println(fahrenheit + "\u00B0F is " + df.format(celsius) + "\u00B0C");
     }
 
-    static void cToF(int celsius) {
-        int fahrenheit = (int) Math.round(celsius * 1.8 + 32);
-        System.out.println(celsius + "\u00B0C is " + fahrenheit + "\u00B0F");
+    static void cToF(double celsius) {
+        double fahrenheit = celsius * 1.8 + 32;
+        DecimalFormat df = new DecimalFormat("###.##");
+        System.out.println(celsius + "\u00B0C is " + df.format(fahrenheit) + "\u00B0F");
     }
 
     static void areaCircle(int radius) {
         double areaOfCircle = 3.14159 * Math.pow(radius, 2);
-        System.out.println("Area of a circle with " + radius + " units radius is " + areaOfCircle + " units.");
+        DecimalFormat df = new DecimalFormat("###.##");
+        System.out.println("Area of a circle with " + radius + " units radius is " + df.format(areaOfCircle) + " units.");
     }
 
     static void averageOfNumbers() {
@@ -26,7 +30,8 @@ public class DayTwoClass {
         System.out.print("Enter third number: ");
         int thirdNumber = input.nextInt();
         int sum = firstNumber + secondNumber + thirdNumber;
-        System.out.println("The average value is " + sum/3 + ".");
+        double average = (double) sum/3;
+        System.out.printf("The average value is %.2f %n", average);
 
     }
 
@@ -156,7 +161,7 @@ public class DayTwoClass {
         System.out.println("");
         System.out.println("A6");
 
-        areaCircle(5);
+        areaCircle(100);
 
         //A7
         System.out.println("");
